@@ -1,0 +1,42 @@
+2013-10-10 -  Version 0.8.1 (aimapp.jar : 196kb, jdbcapp.jar: 117kb)
+    - Updated - Sort clients by staff name
+2013-09-08 -  Version 0.8.0 (aimapp.jar : 196kb, jdbcapp.jar: 117kb)
+    - Created - jdbcApp.report.* classes
+    - Updated - fixed bug where clientConact was being referenced against client_id and not referral_id.
+2013-01-27 - Version 0.7.0 (aimapp.jar : 192kb, jdbcapp.jar: 74kb)
+    - Created - ClientExistsDialog
+    - Updated - ClientFrame additional date checks added
+2012-10-21 - Version 0.6.1 (aimapp.jar: 144kb, jdbapp.jar: 74kb)
+    - Created - SearchFrame added, numerous action classes
+    - Updated - ClientFrame methods cleaned up
+2012-10-12 - Version 0.6.0 
+    - Created - ClientFrame added
+2012-08-27 - Version 0.5.6 (aimapp.jar: 94kb, jdbapp.jar: 74kb)
+    - Updated - SearchFrame - JTree nodes are now sorted alphabetically.
+    - Updated - ReferralFrame - only active staff names displayed.
+    - Created - PIDB3 database tables: aim_list_staff, aim_special_dbedit
+2012-08-25 - Version 0.5.5
+    - Changed - ReferralFrame, staff name defaults to logged in username.
+    - Updated - dbEditDialog, finished coding, added update, insert and delete functions.
+2012-08-19 - Version 0.5.4
+    - Created - dbEditDialog, DBEditDialogAction
+2012-08-15 - Version 0.5.4
+    - Changed   - ReferralFrame, changed much of the logic around the IMCA/ DOLS comboboxes.
+2012-08-14 - Version 0.5.3
+    - Changed   - ReferralFrame - added ORDER BY clauses to all JComboBoxes.
+    - Created   - SearchFrame, CustomJTree - Grouping of open and closed clients now handle separately. New 'no group' option. 
+    - Changed   - dbConnectionDialog - entered details are now saved.
+    - Changed   - dbConnectionDialog, AimApp and referralFrame, window sizes are all saved.
+2012-07-17 - Version 0.5.2
+    - Changed   - referralFrame moved the referral dropboxes from the accepted tabbedpane back onto the main panel
+    - Fix       - dates have been reverted back to dd-MM-yyyy format to remove a bug which was saving null dates as 01-01-2001
+2012-07-10 - Version 0.5.1
+    - Created   - JTextFieldCursorAtEnd added to postcodeTxt
+    - Changed   - ContactTimePanel: clearFields no longer resets dateTxt
+    - Changed   - Removed numerous borderLabels
+    - Fix       - ContactTimePanel: durationTxt added JTextFieldSelectTextListener focusListener
+    - Changed   - date format dd-MM-yy
+    - Fix       - referralFrame: dobTxt added dateTextCheck focusListener
+    - Fix       - searchFrame: when searching by month, referral date being off by one month.
+2012-07-09 - Version 0.5
+    - Initial release.
