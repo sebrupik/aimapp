@@ -12,6 +12,7 @@ import javax.swing.JDesktopPane;
 import jdbcApp.jdbcApp;
 
 import java.awt.event.*;
+import java.util.logging.Logger;
 import javax.swing.*;
 
 public class AimApp extends jdbcApp { 
@@ -21,8 +22,8 @@ public class AimApp extends jdbcApp {
     
     public JDesktopPane jdp;
     
-    public AimApp() { 
-        super("client.properties", "aimapp/preparedstatements.properties");
+    public AimApp(String propsStr, String psRBStr, Logger myLogger) { 
+        super(propsStr, psRBStr, myLogger);
         this._class = this.getClass().getName();
         
         this.genMainPanel();
@@ -30,6 +31,7 @@ public class AimApp extends jdbcApp {
 
  
     public static void main(String[] args) {
+        final java.util.logging.Logger myLogger = java.util.logging.Logger.getLogger("AimApp");
         try {
             for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -38,10 +40,11 @@ public class AimApp extends jdbcApp {
                 }
             }
         } catch (Exception e) {
+            myLogger.logp(java.util.logging.Level.SEVERE, "AimApp", "main", e.toString());
             System.out.println(e);
             // If Nimbus is not available, you can set the GUI to another look and feel.
         }
-        JFrame aa = new AimApp();
+        JFrame aa = new AimApp("client.properties", "aimapp/preparedstatements.properties", myLogger);
         aa.setVisible(true);
     }
     
